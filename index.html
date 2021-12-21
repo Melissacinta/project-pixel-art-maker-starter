@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixel Art Maker!</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Pixel Art Maker</h1>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Monoton"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
-        Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <input type="submit">
-    </form>
+  <body>
+    <header>
+      <h1>Pixel Art Maker</h1>
+      <p>Anyone can be an artist</p>
+    </header>
+    <main>
+      <div class="controls">
+        <button id="clear">Clear</button>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
-
-    <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
+        <label htmlFor="size" id="sizeLablel">Change no of squares</label>
+        <div class="form-group" title="Change no of squares">
+          <label htmlFor="size" id="sizeLablel"
+            ><span></span> X <span></span
+          ></label>
+          <input
+            type="range"
+            name="size"
+            min="1"
+            max="50"
+            id="size"
+            value="16"
+            className="form-control"
+          />
+        </div>
+        <button id="eraser">Eraser</button>
+        <button id="tenBlack">Add 10% Black</button>
+        <button id="randColor">Random Color</button>
+        <div class="form-group" title="click to pick a color">
+          <label htmlFor="colorInput" id="colorLablel">Change Color:</label>
+          <input
+            type="color"
+            name="colorInput"
+            id="colorInput"
+            value="#000000"
+            className="form-control"
+          />
+        </div>
+      </div>
+      <div class="container"></div>
+    </main>
 
     <script src="designs.js"></script>
-</body>
+  </body>
 </html>
